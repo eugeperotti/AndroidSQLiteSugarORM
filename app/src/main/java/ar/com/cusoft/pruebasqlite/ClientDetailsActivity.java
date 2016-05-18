@@ -36,9 +36,11 @@ public class ClientDetailsActivity extends AppCompatActivity {
 
         Client newClient = new Client();
 
-        //Con Sugar ORM
         newClient.setName(editTextNombre.getText().toString());
-        newClient.save();
+
+        //Con Sugar ORM
+        //newClient.save();//Si la clase extiende de SugarRecord
+        SugarRecord.save(newClient); //Si la clase utiliza la annotation @Table
 
         //Con SQLiteOpenHelper
 //        DatabaseHelper db = DatabaseHelper.getInstance(this);

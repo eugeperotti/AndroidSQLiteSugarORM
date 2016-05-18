@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.orm.SugarRecord;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<String> names = new ArrayList<>();
 
         //Con Sugar ORM
-        List<Client> clients = Client.listAll(Client.class);
+//        List<Client> clients = Client.listAll(Client.class);//Si la clase extiende de SugarRecord
+        List<Client> clients = SugarRecord.listAll(Client.class);//Si la clase utiliza la annotation @Table
 
         //Con SQLiteOpenHelper
 //        DatabaseHelper db = DatabaseHelper.getInstance(this);
