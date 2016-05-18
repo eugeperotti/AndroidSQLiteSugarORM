@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PruebaSQLite</string>
+    <string name="nombre_del_cliente">Nombre del cliente</string>
+    <string name="guardar">Guardar</string>
+</resources>
